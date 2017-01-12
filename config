@@ -218,7 +218,7 @@ bar {
 	output eDP-1
 	position top
 	tray_output eDP-1
-	status_command i3status
+	status_command i3status --config ~/.config/i3/i3status.conf
 
 	colors {
 		background #152233
