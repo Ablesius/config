@@ -237,7 +237,7 @@ bar {
 	id bar-2
 	output DP-1
 	position top
-#	status_command i3status --config ~/.config/i3/i3status_secondary.conf
+	status_command i3status --config ~/.config/i3/i3status_secondary.conf
 
 	colors {
 		background #152233
