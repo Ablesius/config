@@ -106,20 +106,20 @@ bindsym $mod+s focus child
 # use variables for workspace names
 set $ws1 "1: Browser"
 set $ws2 "2: Mail"
-set $ws3 "3: IDE"
+set $ws3 "3: Shell"
 set $ws4 "4: Chat"
 set $ws5 "5: Admin"
 set $ws6 "6: Private"
 set $ws7 "7: Office"
 set $ws8 "8: Music"
-set $ws9 "9: PDF"
+set $ws9 "9"
 set $ws10 "10"
 set $ws11 "11: Browser 2"
-set $ws12 "12"
-set $ws13 "13: IDE 2"
+set $ws12 "12: Work"
+set $ws13 "13"
 set $ws14 "14: Chat 2"
-set $ws15 "15: Photo"
-set $ws16 "16: Video"
+set $ws15 "15"
+set $ws16 "16"
 set $ws17 "17"
 set $ws18 "18"
 set $ws19 "19"
@@ -353,15 +353,20 @@ assign [class="Hexchat"] $ws4
 # TODO: firefox "Chat" on 4: Chat
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
-
-# assign some other applications to their own WS
+# assign music stuff to 8
 assign [class="clementine"] $ws8
 assign [class="Clementine"] $ws8
 assign [class="Audacious"] $ws8
 assign [class="audacious"] $ws8
-assign [class="qpdfview"] $ws9
-assign [class="libreoffice"] $ws7
-assign [class="jetbrains-idea"] $ws3
+# spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
+for_window [class="Spotify"] move to workspace $ws8
+
+
+# assign some other applications to their own WS
+#assign [class="jetbrains-idea"] $ws3
+#assign [class="libreoffice"] $ws7
+#assign [class="qpdfview"] $ws9
+#assign [class="GNU Image Manipulation Program"] $ws15
 #assign [class="Vlc"] $ws16
 
 
