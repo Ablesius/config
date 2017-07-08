@@ -424,6 +424,6 @@ exec --no-startup-id nm-applet &
 #### AUTOSTART    ####
 ######################
 # exec firefox
-#exec pidgin
+exec pidgin
 exec --no-startup-id redshift-gtk &
-
+exec rocketchat &
