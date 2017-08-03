@@ -391,8 +391,9 @@ workspace $ws20 output HDMI-1
 # move current workspace to other output
 bindsym $mod+Shift+o move workspace to output right
 bindsym $mod+Shift+i move workspace to output left
-bindsym $mod+Shift+u move workspace to output up
-bindsym $mod+Shift+p move workspace to output down
+# u and p because they are situated similarly to j and k
+bindsym $mod+Shift+u move workspace to output down
+bindsym $mod+Shift+p move workspace to output up
 
 
 
