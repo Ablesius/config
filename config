@@ -112,8 +112,8 @@ set $ws5 "5: Private"
 set $ws6 "6: Work"
 set $ws7 "7: Office"
 set $ws8 "8: Music"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9: Virtualization"
+set $ws10 "10: Virtualization 2"
 set $ws11 "11: Browser 2"
 set $ws12 "12"
 set $ws13 "13"
@@ -354,6 +354,9 @@ assign [class="Hexchat"] $ws4
 # TODO: firefox "Chat" on 4: Chat
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
+# assign virt stuff to 9-0 as they're well reachable on the keyboard
+assign [class="Virtualbox"] $ws9
+
 # assign music stuff to 8
 assign [class="clementine"] $ws8
 assign [class="Clementine"] $ws8
@@ -376,6 +379,8 @@ for_window [class="Spotify"] move to workspace $ws8
 workspace $ws2 output HDMI-1
 workspace $ws4 output HDMI-1
 workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output eDP-1
 workspace $ws11 output HDMI-1
 workspace $ws12 output HDMI-1
 workspace $ws13 output HDMI-1
