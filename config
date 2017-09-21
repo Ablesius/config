@@ -328,6 +328,8 @@ mode "$execute" {
 	bindsym p exec pidgin
 	bindsym h exec hexchat
 	bindsym t exec i3-sensible-terminal
+	bindsym s exec spotify
+	bindsym r exec rocketchat
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
@@ -355,7 +357,7 @@ assign [class="Thunderbird"] $ws2
 assign [class="Pidgin"] $ws4
 assign [class="hexchat"] $ws4
 assign [class="Hexchat"] $ws4
-# TODO: firefox "Chat" on 4: Chat
+assign [class="Rocket.Chat+"] $ws4
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
 # assign virt stuff to 9-0 as they're well reachable on the keyboard
@@ -438,4 +440,4 @@ exec --no-startup-id nm-applet &
 # exec firefox
 exec pidgin
 exec --no-startup-id redshift-gtk &
-exec rocketchat &
+exec rocketchat
