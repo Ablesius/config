@@ -411,6 +411,9 @@ bindsym $mod+Shift+p move workspace to output up
 # custom KEYBOARD SHORTCUTS
 ###########################
 
+# i3lock
+bindsym $mod+Escape exec "i3lock -c000000"
+
 # take a screenshot
 bindsym $mod+Print exec "xfce4-screenshooter"
 bindsym Print exec "xfce4-screenshooter -f"
