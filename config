@@ -427,7 +427,7 @@ bindsym XF86AudioRaiseVolume exec "amixer sset Master 1%+"
 
 #### XFCE SETTINGS    ####
 ##########################
-exec --no-startup-id xfce4-panel --disable-wm-check
+# exec --no-startup-id xfce4-panel --disable-wm-check
 # http://flux242.blogspot.de/2015/10/using-i3-tiling-window-manager-with.html
 # START XFCE
 exec --no-startup-id xfsettingsd --sm-client-disable &
@@ -441,6 +441,6 @@ exec --no-startup-id nm-applet &
 #### AUTOSTART    ####
 ######################
 # exec firefox
-exec pidgin
+exec pidgin &
 exec --no-startup-id redshift-gtk &
-exec rocketchat
+exec rocketchat &
