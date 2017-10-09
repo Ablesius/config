@@ -218,7 +218,7 @@ bar {
 bar {
 	id bar-2
 #	output DP-1
-	output HDMI-1
+	output HDMI-2
 	position top
 	tray_output none
 	status_command i3status --config ~/.config/i3/i3status_secondary.conf
@@ -396,8 +396,8 @@ for_window [class="Spotify"] move to workspace $ws8
 #workspace $ws2 output DP-1
 workspace $ws2 output HDMI-1
 workspace $ws4 output eDP-1
-workspace $ws8 output HDMI-1
-workspace $ws9 output HDMI-1
+workspace $ws8 output HDMI-2
+workspace $ws9 output HDMI-2
 workspace $ws10 output eDP-1
 workspace $ws11 output HDMI-1
 workspace $ws12 output HDMI-1
