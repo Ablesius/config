@@ -410,6 +410,7 @@ assign [class="Pidgin"] $ws4
 assign [class="hexchat"] $ws4
 assign [class="Hexchat"] $ws4
 assign [class="Rocket.Chat+"] $ws4
+assign [class="Skype"] $ws4
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
 # assign music stuff to 8
@@ -436,19 +437,10 @@ for_window [class="xfreerdp"] floating disable
 #workspace $ws2 output DP-1
 workspace $ws2 output HDMI-1
 workspace $ws4 output eDP-1
+workspace $ws6 output HDMI-1
 workspace $ws8 output HDMI-1
-workspace $ws9 output HDMI-1
-workspace $ws10 output eDP-1
-workspace $ws11 output HDMI-1
-workspace $ws12 output HDMI-1
-workspace $ws13 output HDMI-1
-workspace $ws14 output HDMI-1
-workspace $ws15 output HDMI-1
-workspace $ws16 output HDMI-1
-workspace $ws17 output HDMI-1
-workspace $ws18 output HDMI-1
-workspace $ws19 output HDMI-1
-workspace $ws20 output HDMI-1
+workspace $ws9 output HDMI-2
+workspace $ws10 output HDMI-1
 
 
 # move current workspace to other output
