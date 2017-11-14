@@ -255,6 +255,26 @@ bar {
 }
 
 
+# this is the bar for the third monitor at home
+bar {
+	id bar-3
+	output HDMI-2
+	position top
+	tray_output none
+	status_command i3status --config ~/.config/i3/i3status_third.conf
+
+	colors {
+		background #152233
+		statusline #ffffff
+
+#		color_class	  	border	background	text
+		focused_workspace 	#263952	#040058		#ffffff	
+		active_workspace  	#263952	#263952		#7c7c7c
+		inactive_workspace	#152233 #152233 	#7c7c7c
+	}
+}
+
+
 
 #### MY PERSONAL SETTINGS    ####
 #################################
