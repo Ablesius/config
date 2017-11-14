@@ -412,9 +412,6 @@ assign [class="Hexchat"] $ws4
 assign [class="Rocket.Chat+"] $ws4
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
-# assign virt stuff to 9-0 as they're well reachable on the keyboard
-assign [class="Virtualbox"] $ws9
-
 # assign music stuff to 8
 assign [class="clementine"] $ws8
 assign [class="Clementine"] $ws8
@@ -423,6 +420,9 @@ assign [class="audacious"] $ws8
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
 for_window [class="Spotify"] move to workspace $ws8
 
+# assign virt stuff to 9-0 as they're well reachable on the keyboard
+assign [class="Virtualbox"] $ws9
+for_window [class="xfreerdp"] floating disable
 
 # assign some other applications to their own WS
 #assign [class="jetbrains-idea"] $ws3
