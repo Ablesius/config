@@ -98,6 +98,8 @@ bindsym $mod+a focus parent
 # careful: normally mod+s is for stacked, which is commented out!
 bindsym $mod+s focus child
 
+# focus urgent window
+bindsym $mod+z [urgent=latest] focus
 
 
 # WORKSPACES
@@ -214,34 +216,12 @@ bar {
 }
 
 # this is the bar for the secondary monitor
-#TODO so far, this does not work!
 bar {
 	id bar-2
-#	output DP-1
 	output HDMI-1
 	position top
 	tray_output none
 	status_command i3status --config ~/.config/i3/i3status_secondary.conf
-
-	colors {
-		background #152233
-		statusline #ffffff
-
-#		color_class	  	border	background	text
-		focused_workspace 	#263952	#040058		#ffffff	
-		active_workspace  	#263952	#263952		#7c7c7c
-		inactive_workspace	#152233 #152233 	#7c7c7c
-	}
-}
-
-
-# this is the bar for the third monitor
-bar {
-	id bar-3
-	output DP-1
-	position top
-	tray_output none
-	status_command i3status --config ~/.config/i3/i3status_third.conf
 
 	colors {
 		background #152233
