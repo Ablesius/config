@@ -350,7 +350,6 @@ mode "$execute" {
 	bindsym h exec hexchat
 	bindsym t exec i3-sensible-terminal
 	bindsym s exec spotify
-	bindsym r exec rocketchat
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
@@ -389,7 +388,6 @@ assign [class="Thunderbird"] $ws2
 assign [class="Pidgin"] $ws4
 assign [class="hexchat"] $ws4
 assign [class="Hexchat"] $ws4
-assign [class="Rocket.Chat+"] $ws4
 assign [class="Skype"] $ws4
 #assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
@@ -466,4 +464,3 @@ exec --no-startup-id nm-applet &
 # exec firefox
 exec pidgin &
 exec --no-startup-id redshift-gtk &
-exec rocketchat &
