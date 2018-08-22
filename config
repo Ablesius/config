@@ -262,14 +262,10 @@ bar {
 # WINDOW DECORATION
 # # # # # # # # # #
 # border style for new windows
-# see http://i3wm.org/docs/userguide.html#_border_style_for_new_windows
-# for details
-
-# new_window|new_float normal|none|pixel <px>
+# see https://i3wm.org/docs/userguide.html#_default_border_style_for_new_windows
 # normal and pixel work with <px>
-
-new_window normal 1
-new_float normal 1
+default_border normal 1
+default_floating_border normal 1
 
 # hide borders adjacent to screen edges
 hide_edge_borders both
