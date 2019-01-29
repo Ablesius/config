@@ -28,6 +28,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start rofi instead of dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
+bindsym $mod+Shift+d exec rofi -show drun -show-icons
 bindsym $mod+Shift+s exec rofi -show ssh -ssh-command 'i3-sensible-terminal -e "ssh {host}"'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
