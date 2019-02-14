@@ -6,9 +6,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:Roboto Mono 10
 
-
 # BASIC COMMANDS
-################
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -20,7 +18,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -38,9 +35,7 @@ bindsym $mod+Shift+s exec rofi -show ssh -ssh-command 'i3-sensible-terminal -e "
 #bindsym $mod+Shift+d exec --no-startup-id xfce4-popup-whiskermenu
 #bindsym $mod+Shift+d exec dmenu_run
 
-
 # BASIC MOVEMENT
-################
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -53,13 +48,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -68,10 +61,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 
-
-
 # CONTAINER LAYOUT
-##################
 # split in horizontal orientation
 bindsym $mod+c split h
 
@@ -103,10 +93,7 @@ bindsym $mod+s focus child
 # focus urgent window
 bindsym $mod+z [urgent=latest] focus
 
-
 # WORKSPACES
-############
-
 # use variables for workspace names
 set $ws1 "1: Browser"
 set $ws2 "2: Mail"
@@ -194,7 +181,6 @@ bindsym $mod+minus scratchpad show
 
 
 # i3bar SETTINGS
-################
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
@@ -249,7 +235,7 @@ bar {
 		background #152233
 		statusline #ffffff
 
-#		color_class	  	border	background	text
+#		color_class	  	    border	background	text
 		focused_workspace 	#263952	#040058		#ffffff	
 		active_workspace  	#263952	#263952		#7c7c7c
 		inactive_workspace	#152233 #152233 	#7c7c7c
@@ -258,11 +244,9 @@ bar {
 
 
 
-#### MY PERSONAL SETTINGS    ####
-#################################
+# MY PERSONAL SETTINGS
 
 # WINDOW DECORATION
-# # # # # # # # # #
 # border style for new windows
 # see https://i3wm.org/docs/userguide.html#_default_border_style_for_new_windows
 # normal and pixel work with <px>
@@ -296,7 +280,7 @@ force_display_urgency_hint 500 ms
 
 
 
-#### MOUSE SETTINGS ####
+# MOUSE SETTINGS
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -310,7 +294,6 @@ mouse_warping none
 
 
 # MODES
-#######
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -372,14 +355,8 @@ bindsym $mod+p mode "$power"
 
 
 # ASSIGNMENTS
-#############
-
 # assign stuff to specific workspaces
-
-# assign browser to ws 1
 #assign [class="firefox"] $ws1
-
-# assign Thunderbird to ws 2
 assign [class="Thunderbird"] $ws2
 
 # assign chat stuff to 4: Chat
@@ -387,7 +364,6 @@ assign [class="Pidgin"] $ws4
 assign [class="hexchat"] $ws4
 assign [class="Hexchat"] $ws4
 assign [class="Skype"] $ws4
-#assign [class="firefox" title="^Chat - TolkienForum.*"] $ws4
 
 # assign music stuff to 8
 assign [class="clementine"] $ws8
@@ -398,25 +374,16 @@ assign [class="audacious"] $ws8
 for_window [class="Spotify"] move to workspace $ws8
 
 # assign virt stuff to 9-0 as they're well reachable on the keyboard
-assign [class="Virtualbox"] $ws9
+#assign [class="Virtualbox"] $ws9
 for_window [class="xfreerdp"] floating disable
-
-# assign some other applications to their own WS
-#assign [class="jetbrains-idea"] $ws3
-#assign [class="libreoffice"] $ws7
-#assign [class="qpdfview"] $ws9
-#assign [class="GNU Image Manipulation Program"] $ws15
-#assign [class="Vlc"] $ws16
-
 
 # automatically put workspaces on specific output
 workspace $ws2 output HDMI-2
 workspace $ws4 output eDP-1
-workspace $ws6 output HDMI-1
+#workspace $ws6 output HDMI-1
 workspace $ws8 output HDMI-2
 workspace $ws9 output HDMI-2
 workspace $ws10 output HDMI-1
-
 
 # move current workspace to other output
 bindsym $mod+Shift+o move workspace to output right
@@ -425,11 +392,7 @@ bindsym $mod+Shift+i move workspace to output left
 bindsym $mod+Shift+u move workspace to output down
 bindsym $mod+Shift+p move workspace to output up
 
-
-
 # custom KEYBOARD SHORTCUTS
-###########################
-
 # i3lock
 bindsym $mod+Escape exec "i3lock -c000000"
 
@@ -437,15 +400,13 @@ bindsym $mod+Escape exec "i3lock -c000000"
 bindsym $mod+Print exec "xfce4-screenshooter"
 bindsym Print exec "xfce4-screenshooter -f"
 
-
 # control sound volume
 bindsym XF86AudioMute exec ~/.bin/toggle_mute.sh
 bindsym XF86AudioLowerVolume exec "amixer sset Master 1%-"
 bindsym XF86AudioRaiseVolume exec "amixer sset Master 1%+"
 #bindsym XF86AudioMicMute exec
 
-#### XFCE SETTINGS    ####
-##########################
+# XFCE SETTINGS
 # exec --no-startup-id xfce4-panel --disable-wm-check
 # http://flux242.blogspot.de/2015/10/using-i3-tiling-window-manager-with.html
 # START XFCE
@@ -455,10 +416,7 @@ exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id xfce4-session-manager &
 exec --no-startup-id nm-applet &
 
-
-
-#### AUTOSTART    ####
-######################
+# AUTOSTART
 # exec firefox
 # exec pidgin &
 exec --no-startup-id ~/.fehbg &
