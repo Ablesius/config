@@ -373,8 +373,6 @@ assign [class="audacious"] $ws10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
 for_window [class="Spotify"] move to workspace $ws10
 
-# assign virt stuff to 9-0 as they're well reachable on the keyboard
-#assign [class="Virtualbox"] $ws9
 for_window [class="xfreerdp"] floating disable
 
 # automatically put workspaces on specific output
