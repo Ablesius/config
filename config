@@ -396,7 +396,8 @@ bindsym $mod+Print exec "xfce4-screenshooter"
 bindsym Print exec "xfce4-screenshooter -f"
 
 # control sound volume
-bindsym XF86AudioMute exec ~/.bin/toggle_mute.sh
+#bindsym XF86AudioMute exec ~/.bin/toggle_mute.sh
+bindsym XF86AudioMute exec "amixer sset Master 0%"
 bindsym XF86AudioLowerVolume exec "amixer sset Master 1%-"
 bindsym XF86AudioRaiseVolume exec "amixer sset Master 1%+"
 #bindsym XF86AudioMicMute exec
@@ -405,6 +406,7 @@ bindsym XF86AudioRaiseVolume exec "amixer sset Master 1%+"
 # exec --no-startup-id xfce4-panel --disable-wm-check
 # http://flux242.blogspot.de/2015/10/using-i3-tiling-window-manager-with.html
 # START XFCE
+
 exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id xfce4-volumed &
 exec --no-startup-id xfce4-power-manager &
