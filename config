@@ -325,10 +325,7 @@ mode "$execute" {
 	bindsym w exec firefox
 	bindsym m exec thunderbird
 	bindsym f exec thunar
-	bindsym v exec vlc
-	bindsym a exec audacious
 	bindsym p exec pidgin
-	bindsym h exec hexchat
 	bindsym t exec i3-sensible-terminal
 	bindsym s exec spotify
 
