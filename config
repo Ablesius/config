@@ -392,8 +392,8 @@ bindsym $mod+Shift+p move workspace to output up
 bindsym $mod+Escape exec "i3lock -c000000"
 
 # take a screenshot
-bindsym $mod+Print exec "flameshot gui"
-bindsym Print exec "flameshot full -p /tmp/"
+bindsym $mod+Print exec "xfce4-screenshooter"
+bindsym Print exec "xfce4-screenshooter -f"
 
 # control sound volume
 #bindsym XF86AudioMute exec ~/.bin/toggle_mute.sh
