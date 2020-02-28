@@ -359,15 +359,10 @@ assign [class="jetbrains-pycharm-ce"] $ws4
 
 # assign chat stuff to Chat
 assign [class="Pidgin"] $ws3
-assign [class="hexchat"] $ws3
-assign [class="Hexchat"] $ws3
 assign [class="Skype"] $ws3
+assign [class="mattermost"] $ws3
 
 # assign music stuff to 10
-assign [class="clementine"] $ws10
-assign [class="Clementine"] $ws10
-assign [class="Audacious"] $ws10
-assign [class="audacious"] $ws10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
 for_window [class="Spotify"] move to workspace $ws10
 
