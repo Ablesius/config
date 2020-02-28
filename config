@@ -371,6 +371,9 @@ assign [class="audacious"] $ws10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
 for_window [class="Spotify"] move to workspace $ws10
 
+assign [class="gimp"] $ws12
+assign [class="Gimp"] $ws12
+
 for_window [class="xfreerdp"] floating disable
 
 # automatically put workspaces on specific output
@@ -392,8 +395,8 @@ bindsym $mod+Shift+p move workspace to output up
 bindsym $mod+Escape exec "i3lock -c000000"
 
 # take a screenshot
-bindsym $mod+Print exec "flameshot gui"
-bindsym Print exec "flameshot full -p /tmp/"
+bindsym $mod+Print exec "xfce4-screenshooter"
+bindsym Print exec "xfce4-screenshooter -f"
 
 # control sound volume
 #bindsym XF86AudioMute exec ~/.bin/toggle_mute.sh
