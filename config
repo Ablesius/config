@@ -91,6 +91,8 @@ bindsym $mod+s focus child
 
 # focus urgent window
 bindsym $mod+z [urgent=latest] focus
+# delay urgency hint reset
+force_display_urgency_hint 500 ms
 
 # WORKSPACES
 # use variables for workspace names
@@ -274,8 +276,6 @@ client.placeholder	#3c0090 #0c0c0c #ffffff #000000   #0c0c0c
 
 
 
-# delay urgency hint reset
-force_display_urgency_hint 500 ms
 
 
 
