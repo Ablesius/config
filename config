@@ -72,8 +72,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# careful: this is re-assigned to focus child below!
-#bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking		# careful: this is re-assigned to focus child below!
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -83,10 +82,7 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
 # careful: normally mod+s is for stacked, which is commented out!
 bindsym $mod+s focus child
 
@@ -413,4 +409,6 @@ exec --no-startup-id nm-applet &
 
 # AUTOSTART
 exec --no-startup-id ~/.fehbg &
+
+# Misc
 exec --no-startup-id redshift-gtk -c ~/.config/redshift.conf &
