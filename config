@@ -324,7 +324,6 @@ mode "$execute" {
 	bindsym w exec firefox
 	bindsym m exec thunderbird
 	bindsym f exec thunar
-	bindsym p exec pidgin
 	bindsym t exec i3-sensible-terminal
 	bindsym s exec spotify
 
