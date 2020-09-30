@@ -99,7 +99,7 @@ force_display_urgency_hint 500 ms
 set $ws1 "1: Browser"
 set $ws2 "2: Mail"
 set $ws3 "3: Chat"
-set $ws4 "4: Dev"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -353,7 +353,7 @@ bindsym $mod+p mode "$power"
 # assign stuff to specific workspaces
 #assign [class="firefox"] $ws1
 assign [class="Thunderbird"] $ws2
-assign [class="jetbrains-pycharm-ce"] $ws4
+#assign [class="jetbrains-pycharm-ce"] $ws4
 
 # assign chat stuff to Chat
 assign [class="Pidgin"] $ws3
@@ -378,7 +378,7 @@ workspace $ws2 output HDMI-2
 #workspace $ws3 output eDP-1
 workspace $ws10 output HDMI-2
 workspace $ws11 output HDMI-2
-workspace $ws4 output HDMI-2
+#workspace $ws4 output HDMI-2
 
 # move current workspace to other output
 bindsym $mod+Shift+o move workspace to output right
