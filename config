@@ -326,6 +326,7 @@ mode "$execute" {
 	bindsym f exec thunar
 	bindsym t exec i3-sensible-terminal
 	bindsym s exec spotify
+	bindsym d exec discord
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
@@ -363,6 +364,7 @@ assign [class="Mattermost"] $ws3
 assign [class="Signal"] $ws3
 assign [class="telegram-desktop"] $ws3
 assign [class="TelegramDesktop"] $ws3
+assign [class="discord"] $ws3
 
 # assign music stuff to 10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
