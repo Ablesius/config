@@ -326,6 +326,7 @@ mode "$execute" {
 	bindsym f exec thunar
 	bindsym t exec i3-sensible-terminal
 	bindsym s exec spotify
+	bindsym d exec discord
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
