@@ -364,6 +364,7 @@ assign [class="Mattermost"] $ws3
 assign [class="Signal"] $ws3
 assign [class="telegram-desktop"] $ws3
 assign [class="TelegramDesktop"] $ws3
+assign [class="discord"] $ws3
 
 # assign music stuff to 10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
