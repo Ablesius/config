@@ -2,6 +2,9 @@ set $mod Mod4
 # Mod4 : Super
 # Mod1 : Alt
 
+# use this instead of i3-sensible-terminal as long as termite comes before alacritty in i3-sensible-terminal's list
+set $terminal alacritty
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Roboto Mono 10
@@ -20,13 +23,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+q kill
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $terminal
 
 # start rofi instead of dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 bindsym $mod+Shift+d exec rofi -show drun -show-icons
-bindsym $mod+Shift+s exec rofi -show ssh -ssh-command 'i3-sensible-terminal -e "ssh {host}"'
+#bindsym $mod+Shift+s exec rofi -show ssh -ssh-command "$terminal -e \"ssh {host}\" &"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -104,7 +108,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9: Chat 2"
 set $ws10 "10: Music"
 set $ws11 "11"
 set $ws12 "12"
@@ -324,7 +328,7 @@ mode "$execute" {
 	bindsym w exec firefox
 	bindsym m exec thunderbird
 	bindsym f exec thunar
-	bindsym t exec i3-sensible-terminal
+	bindsym t exec $terminal
 	bindsym s exec spotify
 	bindsym d exec discord
 
@@ -359,12 +363,10 @@ assign [class="Thunderbird"] $ws2
 # assign chat stuff to Chat
 assign [class="Pidgin"] $ws3
 assign [class="Skype"] $ws3
-assign [class="mattermost"] $ws3
-assign [class="Mattermost"] $ws3
 assign [class="Signal"] $ws3
 assign [class="telegram-desktop"] $ws3
 assign [class="TelegramDesktop"] $ws3
-assign [class="discord"] $ws3
+assign [class="discord"] $ws9
 
 # assign music stuff to 10
 # spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
