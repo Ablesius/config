@@ -331,6 +331,8 @@ mode "$execute" {
 	bindsym t exec $terminal
 	bindsym s exec spotify
 	bindsym d exec discord
+	bindsym g exec signal-desktop
+	bindsym l exec telegram-desktop
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
