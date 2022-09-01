@@ -101,8 +101,8 @@ force_display_urgency_hint 500 ms
 # WORKSPACES
 # use variables for workspace names
 set $ws1 "1: Browser"
-set $ws2 "2: Mail"
-set $ws3 "3: Chat"
+set $ws2 "2: Chat"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -114,7 +114,7 @@ set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
 set $ws14 "14"
-set $ws15 "15"
+set $ws15 "15: Mail"
 set $ws16 "16"
 set $ws17 "17"
 set $ws18 "18"
@@ -181,8 +181,48 @@ bindsym $mod+Shift+F10 move container to workspace $ws20
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+# ASSIGNMENTS
+# assign stuff to specific workspaces
+#assign [class="firefox"] $ws1
+assign [class="Thunderbird"] $ws15
+assign [class="thunderbird"] $ws15
+#assign [class="jetbrains-pycharm-ce"] $ws4
+
+# chat stuff
+assign [class="Signal"] $ws2
+assign [class="telegram-desktop"] $ws2
+assign [class="TelegramDesktop"] $ws2
+assign [class="discord"] $ws9
+
+# assign music stuff to 10
+# spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
+for_window [class="Spotify"] move to workspace $ws10
+
+assign [class="gimp"] $ws12
+assign [class="Gimp"] $ws12
+
+for_window [class="xfreerdp"] floating disable
 
 
+# automatically put workspaces on specific output
+
+# internal
+workspace $ws2 output eDP-1
+
+# ext 1 (left)
+workspace $ws1 output HDMI-1
+
+# ext 2 (right)
+workspace $ws9 output HDMI-2
+workspace $ws10 output HDMI-2
+workspace $ws11 output HDMI-2
+
+# move current workspace to other output
+bindsym $mod+Shift+o move workspace to output right
+bindsym $mod+Shift+i move workspace to output left
+# u and p because they are situated similarly to j and k
+bindsym $mod+Shift+u move workspace to output down
+bindsym $mod+Shift+p move workspace to output up
 
 
 # i3bar SETTINGS
@@ -248,8 +288,6 @@ bar {
 }
 
 
-
-# MY PERSONAL SETTINGS
 
 # WINDOW DECORATION
 # border style for new windows
@@ -353,43 +391,6 @@ mode "$power" {
 
 bindsym $mod+p mode "$power"
 
-
-# ASSIGNMENTS
-# assign stuff to specific workspaces
-#assign [class="firefox"] $ws1
-assign [class="Thunderbird"] $ws2
-#assign [class="jetbrains-pycharm-ce"] $ws4
-
-# assign chat stuff to Chat
-assign [class="Pidgin"] $ws3
-assign [class="Skype"] $ws3
-assign [class="Signal"] $ws3
-assign [class="telegram-desktop"] $ws3
-assign [class="TelegramDesktop"] $ws3
-assign [class="discord"] $ws9
-
-# assign music stuff to 10
-# spotify can't behave, so here's a workaround for spotify's setting xprop only after loading the window:
-for_window [class="Spotify"] move to workspace $ws10
-
-assign [class="gimp"] $ws12
-assign [class="Gimp"] $ws12
-
-for_window [class="xfreerdp"] floating disable
-
-# automatically put workspaces on specific output
-workspace $ws2 output HDMI-1
-#workspace $ws3 output eDP-1
-workspace $ws10 output HDMI-2
-workspace $ws11 output HDMI-2
-#workspace $ws4 output HDMI-2
-
-# move current workspace to other output
-bindsym $mod+Shift+o move workspace to output right
-bindsym $mod+Shift+i move workspace to output left
-# u and p because they are situated similarly to j and k
-bindsym $mod+Shift+u move workspace to output down
-bindsym $mod+Shift+p move workspace to output up
 
 # custom KEYBOARD SHORTCUTS
 # i3lock
