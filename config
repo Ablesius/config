@@ -202,6 +202,7 @@ assign [class="gimp"] $ws12
 assign [class="Gimp"] $ws12
 
 for_window [class="xfreerdp"] floating disable
+for_window [class="thunderbird" window_role="EventDialog"] floating disable
 
 
 # automatically put workspaces on specific output
